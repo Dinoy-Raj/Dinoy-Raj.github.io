@@ -11,11 +11,16 @@
     For more details:
     * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
   -->
+
+
   <base href="/">
+
+
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
   <meta name="description" content="A Todo-cum-Project Management Application to improve productivity">
+  <meta name="google-signin-client_id" content="306700421859-ekkfr3tcrnvr4oe479j37anmiktu8tua.apps.googleusercontent.com">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -27,11 +32,45 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
+
+
+
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+
+<!-- Add for Firebase Storage: https://pub.dev/packages/firebase_storage -->
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+
+<!-- Add for Cloud Firestore: https://pub.dev/packages/cloud_firestore -->
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+
+<!-- Add for Firebase Auth: https://pub.dev/packages/firebase_auth -->
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyArOZmVd_merSZdC8C_whtNnbQuedw_lh8",
+    authDomain: "productivityapp-37596.firebaseapp.com",
+    projectId: "productivityapp-37596",
+    storageBucket: "productivityapp-37596.appspot.com",
+    messagingSenderId: "306700421859",
+    appId: "1:306700421859:web:91167753261327c99993d6",
+    measurementId: "G-T2QWE0N318"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
   <!-- This script installs service_worker.js to provide PWA functionality to
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
-    var serviceWorkerVersion = null;
+    var serviceWorkerVersion = '703975633';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {
